@@ -5,7 +5,7 @@ defmodule Inky.PixelUtil do
 
   def pixels_to_bits(pixels, width, height, rotation_degrees, color_map) do
     {outer_axis, dimension_vectors} =
-      rotation_degrees
+      -rotation_degrees
       |> normalised_rotation()
       |> rotation_opts()
 
